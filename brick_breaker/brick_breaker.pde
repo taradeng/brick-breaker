@@ -1,5 +1,8 @@
 //mode framework variables final int INTRO = 1;
-
+//QUIZ on dist(x1, y1, x2, y2)
+// if (dist(bx, by, px, py) < 60) {
+// 
+//}
 final int GAME  = 2;
 
 final int GAMEOVER = 3;
@@ -67,5 +70,6 @@ void draw() {
     println("?");
 
   }
+  
 
 }

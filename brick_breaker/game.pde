@@ -15,6 +15,13 @@ void gameClicks() {
 }
 
 void ball() {
+  //sum of radii 60 
+  if (dist(bx, by, px, py) < 60) {
+    bvx = (bx- px)/5;
+    //bvx = bx - px*2 for super speed
+    bvy=(by-py)/5;
+    
+  }
   ellipse(bx, by, 20, 20);
 
 //move the ball code
