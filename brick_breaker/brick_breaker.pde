@@ -3,6 +3,7 @@
 // if (dist(bx, by, px, py) < 60) {
 // 
 //}
+ArrayList<Brick> myBricks;
 final int GAME  = 2;
 
 final int GAMEOVER = 3;
@@ -31,8 +32,17 @@ boolean leftKey, rightKey;
 
 
 
-void setup() {
 
+  void setup() { 
+    myBricks = new ArrayList<Brick>();
+    
+    int i = 0;
+    while (i<100) {
+      myBricks. add( new Brick() ) ; // calling constructor (invoke) 
+     i++;
+    }
+    
+    
   size(800, 600);
 //ball 
 bx = width/2;
