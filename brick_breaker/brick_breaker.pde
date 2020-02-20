@@ -14,6 +14,7 @@ final int INTRO = 5;
 int mode = GAME;  //1: intro screen, 2: game playing, 3: gameover screen, 4: pause
 
 
+
 //ball variables
 float bx, by, bvx, bvy; //ball variables
 
@@ -22,6 +23,9 @@ float px, py;
 
 //keyboard variables 
 boolean leftKey, rightKey;
+
+//brick planning variables 
+float gridx, gridy;
 
 //speed? 
 //float vx, vy;
@@ -34,16 +38,26 @@ boolean leftKey, rightKey;
 
 
   void setup() { 
+    size(800, 600);
     myBricks = new ArrayList<Brick>();
     
-    int i = 0;
-    while (i<100) {
+   gridx=0;
+   gridy=200;
+   int i = 0;
+ 
+  
+    while (i<480) {
       myBricks. add( new Brick() ) ; // calling constructor (invoke) 
-     i++;
+     gridx = gridx + 10;
+     if (gridx >= 800) {
+       gridx= 0;
+       gridy = gridy+50;
+     }   
+       i=i+1;
     }
     
     
-  size(800, 600);
+
 //ball 
 bx = width/2;
 by = height/2;
@@ -54,6 +68,7 @@ bvy = 3;
 px = width/2;
 py = height+10;
 }
+
 
 
 

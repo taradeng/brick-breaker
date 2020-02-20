@@ -5,7 +5,7 @@ void game() {
   background(0,0,255);
   
   int i = 0;
-  while (i< 100) {
+  while (i< 480) {
     Brick b = myBricks.get(i);
     b.act();
     b.show();

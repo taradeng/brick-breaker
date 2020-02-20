@@ -8,8 +8,8 @@ class Brick {
  //hp hit points
   //2. Constructor - initializes the instance variables : avoid the void, same name as the class
   Brick() {
-    x= random(0, width);
-    y= random(0, height);
+    x= gridx;
+    y= gridy;
     hp = 1;
     c = #FFFFFF;
     
