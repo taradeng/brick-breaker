@@ -4,8 +4,11 @@ void game() {
 
   background(0,0,255);
   
+  lives = 3;
+  // no : score = score + 1;
+  
   int i = 0;
-  while (i< 480) {
+  while (i< 46) {
     Brick b = myBricks.get(i);
     b.act();
     b.show();
@@ -31,7 +34,7 @@ void ball() {
     bvy=(by-py)/10;
     
   }
-  ellipse(bx, by, 20, 20);
+  ellipse(bx, by+150, 20, 20);
 
 //move the ball code
 bx = bx + bvx;

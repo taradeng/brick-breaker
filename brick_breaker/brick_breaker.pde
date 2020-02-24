@@ -11,7 +11,9 @@ final int GAMEOVER = 3;
 final int PAUSE = 4;
 final int INTRO = 5;
 
-int mode = GAME;  //1: intro screen, 2: game playing, 3: gameover screen, 4: pause
+int score;
+int lives;
+int mode = INTRO;  //1: intro screen, 2: game playing, 3: gameover screen, 4: pause
 
 
 
@@ -42,16 +44,16 @@ float gridx, gridy;
     myBricks = new ArrayList<Brick>();
     
    gridx=0;
-   gridy=200;
+   gridy=0;
    int i = 0;
  
   
-    while (i<480) {
+    while (i<46) {
       myBricks. add( new Brick() ) ; // calling constructor (invoke) 
-     gridx = gridx + 10;
-     if (gridx >= 800) {
-       gridx= 0;
-       gridy = gridy+50;
+     gridx = gridx + 75;
+     if (gridx > 700) {
+       gridx= 100;
+       gridy = gridy+100;
      }   
        i=i+1;
     }
